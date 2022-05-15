@@ -2,3 +2,50 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+    background-color: azure;
+}
+
+.slider {
+    width: 1100px;
+    height: 600px;
+
+    border: 5px solid gray;
+    display: flex;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slides {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide {
+    width: 600px;
+    height: 400px;
+}
+
+.slide-1 {
+    background-image: url("assets/img/1.jpg");
+
+}
+
+.slide-2 {
+    background-image: url("assets/img/2.jpg");
+}
+
+.slide-3 {
+    background-image: url("assets/img/3.jpg");
+}
+
+.slide-4 {
+    background-image: url("assets/img/4.jpg");
+}
