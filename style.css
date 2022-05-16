@@ -15,6 +15,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: azure;
+    filter: drop-shadow(0 0 3px black);
 }
 
 .wrapper {
@@ -56,7 +57,9 @@ body {
 .slide-text {
     width: 400px;
     height: 0px;
-    opacity: 0;
+    opacity: 1;
+    transform: scale(0.8);
+    transition: transform 1s;
 }
 
 .slide-img-1 {
@@ -82,7 +85,7 @@ input {
 .navigation {
     display: flex;
     width: 200px;
-    height: 100px;
+    height: 20px;
     justify-content: flex-end;
 }
 
@@ -102,14 +105,15 @@ input {
     transition: transform 0.5s;
 }
 
-#r1:checked ~ .slides #slide1, .texts .slide-text-1 {
+#r1:checked ~ .slides #slide1 {
     height: 400px;
     opacity: 1;
 }
 
 #r1:checked ~ .texts .slide-text-1 {
-    height: 100px;
+    height: 40px;
     opacity: 1;
+    transform: scale(1);
 }
 
 #r1:checked ~ .slides #slide2, #slide3, #slide4 {
@@ -132,8 +136,9 @@ input {
 }
 
 #r2:checked ~ .texts .slide-text-2 {
-    height: 100px;
+    height: 40px;
     opacity: 1;
+    transform: scale(1);
 }
 
 #r2:checked ~ .slides #slide1, #slide3, #slide4 {
@@ -156,8 +161,9 @@ input {
 }
 
 #r3:checked ~ .texts .slide-text-3 {
-    height: 100px;
+    height: 40px;
     opacity: 1;
+    transform: scale(1);
 }
 
 #r3:checked ~ .slides #slide1, #slide2, #slide4 {
@@ -180,8 +186,9 @@ input {
 }
 
 #r4:checked ~ .texts .slide-text-4 {
-    height: 100px;
+    height: 40px;
     opacity: 1;
+    transform: scale(1);
 }
 
 #r4:checked ~ .slides #slide1, #slide3, #slide2 {
@@ -219,100 +226,35 @@ input {
     .slider {
         width: 400px;
         height: 400px;
-        border-radius: 20px;
-        border: 5px solid gray;
-        display: flex;
-        justify-content: center;
     }
 
     .wrapper {
         width: 350px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .middle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .slides {
-        margin-top: 30px;
-        margin-bottom: 30px;
         width: 350px;
         height: 200px;
-        overflow: hidden;
         order: 0;
-    }
-
-    .slide {
-        height: 0px;
-        opacity: 1;
-        transition: opacity 1s;
     }
 
     .slide-img {
         width: 350px;
         height: 200px;
-        border-radius: 5px;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     .slide-text {
         width: 350px;
-        height: 0px;
-        opacity: 0;
     }
 
     .texts {
         order: 2;
     }
 
-    .slide-img-1 {
-        background-image: url("assets/img/1.jpg");
-    }
-
-    .slide-img-2 {
-        background-image: url("assets/img/2.jpg");
-    }
-
-    .slide-img-3 {
-        background-image: url("assets/img/3.jpg");
-    }
-
-    .slide-img-4 {
-        background-image: url("assets/img/4.jpg");
-    }
-
-    input {
-        display: none;
-    }
-
     .navigation {
-        display: flex;
         width: 350px;
-        height: 20px;
         justify-content: center;
         order: 1;
-    }
-
-    .bar {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: gray;
-        cursor: pointer;
-        border: 5px solid azure;
-    }
-
-    .bar:hover {
-        border-color: gray;
-        background-color: azure;
-        transform: scale(1.2);
-        transition: transform 0.5s;
     }
 
     #r1:checked ~ .slides #slide1, .texts .slide-text-1 {
@@ -321,8 +263,9 @@ input {
     }
 
     #r1:checked ~ .texts .slide-text-1 {
-        height: 50px;
+        height: 40px;
         opacity: 1;
+        transform: scale(1);
     }
 
     #r1:checked ~ .slides #slide2, #slide3, #slide4 {
@@ -345,8 +288,9 @@ input {
     }
 
     #r2:checked ~ .texts .slide-text-2 {
-        height: 50px;
+        height: 40px;
         opacity: 1;
+        transform: scale(1);
     }
 
     #r2:checked ~ .slides #slide1, #slide3, #slide4 {
@@ -369,8 +313,9 @@ input {
     }
 
     #r3:checked ~ .texts .slide-text-3 {
-        height: 50px;
+        height: 40px;
         opacity: 1;
+        transform: scale(1);
     }
 
     #r3:checked ~ .slides #slide1, #slide2, #slide4 {
@@ -393,8 +338,9 @@ input {
     }
 
     #r4:checked ~ .texts .slide-text-4 {
-        height: 50px;
+        height: 40px;
         opacity: 1;
+        transform: scale(1);
     }
 
     #r4:checked ~ .slides #slide1, #slide3, #slide2 {
